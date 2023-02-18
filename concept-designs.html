@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- CSS loading -->
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="buttons.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Accesibility concepts</h1>
+
+      <article>
+        <h2>Color and visual about UI accesibility</h2>
+
+        <section>
+          <h3>Visual advertisementes</h3>
+
+          <p>
+            Don't use only colors for visual advertisements, because not all
+            uses with understand the message
+          </p>
+          <p>
+            Use different contrast colors and indicators (like an X for exit)
+            for users with problems differentiating colors
+          </p>
+
+          <h4>color blindness types:</h4>
+          <ul>
+            <li>
+              red-green, where users have a difficult time differentiating
+              between the red and green colors.
+            </li>
+            <li>blue-yellow, where the blues tend to appear greener</li>
+            <li>monochromatic, when users can’t see color at all.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Tools</h3>
+          <p>
+            Contrast checker: https://webaim.org/resources/contrastchecker/, for
+            measuring contrast problems.
+          </p>
+          <p>Creating safe colors: http://colorsafe.co/</p>
+        </section>
+      </article>
+
+      <section>
+        <h3>Accesibility about HTML</h3>
+        <ul>
+          <li>
+            Using semantic HTML elements whenever possible (such as header
+            instead of a div with an id="header") will allow screen reader users
+            to navigate your website more efficiently.
+          </li>
+          <li>
+            The role attribute is used to communicate information about the role
+            of specific elements.
+          </li>
+          <li>
+            role="presentation" allows a screen reader to skip markup elements
+            that don't directly contain useful information.
+          </li>
+          <li>
+            aria-label and other ARIA properties can be used to help users
+            perceive information that is communicated visually but not through
+            text.
+          </li>
+          <li>
+            The alt attribute should be added to every image element (and all
+            other elements that support it) instead of aria-label. When used,
+            its value should be a useful description of the image.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <main>
+      <h1>Design principles</h1>
+
+      <article>
+        <h2>Wireframing (wireframe) vs Prototyping (Prototype)</h2>
+        <a
+          href="https://xd.adobe.com/ideas/process/wireframing/wireframe-design-definition/"
+          >Checkout article</a
+        >
+      </article>
+
+      <article>
+        <h2>Interaction feedback</h2>
+        <p>title attribute as tooltip</p>
+
+        <section>
+          <h3>Buttons</h3>
+          <p>
+            User expect buttons to be clickable, they must have a cursor pointer
+            and hover states
+          </p>
+
+          <section>
+            <div>
+              <button class="simple">Press me</button>
+              <button class="simple">Press me</button>
+            </div>
+          </section>
+
+          <section>
+            <h2>3D Type: Skeuomorphic design</h2>
+
+            <div>
+              <button class="skeuomorphic">Press me</button>
+              <button class="skeuomorphic">Press me</button>
+            </div>
+          </section>
+
+          <section>
+            <h2>2D Type: Flat design</h2>
+
+            <div>
+              <button class="flat">Press me</button>
+              <button class="flat">Press me</button>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <h3>Anchor</h3>
+          <p>Pseudoclasses for user feedback when interacting with them:</p>
+          <ul>
+            <li>:link</li>
+            <li>:visited</li>
+            <li>:hover</li>
+            <li>:active</li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <h2>Colors theory</h2>
+
+        <section>
+          <h3>Color Psychology</h3>
+          <ul>
+            <li>Red: Passionate, energetic, angry</li>
+            <li>Orange: Optimistic, playful, fun</li>
+            <li>Yellow: Welcoming, intellectual, impatient</li>
+            <li>Green: Prosperous, balanced, growing</li>
+            <li>Blue: Peaceful, loyal, cold</li>
+            <li>Purple: Imaginative, royal, spiritual</li>
+            <li>Gray: Unemotional, compromising</li>
+            <li>White: Innocent, pure</li>
+            <li>Black: Luxurious, powerful</li>
+          </ul>
+          <img src="./color_psychology_diagram.svg" />
+        </section>
+
+        <section>
+          <h2>Color schemes</h2>
+          <p>
+            Most users skim websites, they will not read every word and checking
+            every menu, you need to guide the user to the most important content
+            with good color choices.
+          </p>
+
+          <section>
+            <h3>Triadic color scheme</h3>
+            <p>
+              Provides a sense of equality, vibrancy, and security in your
+              designs.
+            </p>
+
+            <p>
+              If we stick with blue being our main color, we would then select
+              red-orange and yellow-green as the pairing combinations. This
+              creates a triangle of colors within the color wheel and gives us a
+              wider palette to choose from.
+            </p>
+            <img src="triadic.svg" />
+          </section>
+
+          <section>
+            <h3>Analogous color scheme</h3>
+            <p>Low-contrast experience</p>
+            <p>Color schemes create a visually pleasing and calming display.</p>
+            <p>
+              They shouldn't be used for content that needs the user's direct
+              attention, but they can be used to create backgrounds that do not
+              compete with the main content of the site.
+            </p>
+            <img src="analogous.svg" />
+          </section>
+
+          <section>
+            <h3>Complementary color scheme</h3>
+
+            <p>
+              Complementary color palettes are very common in logos and
+              uniforms.
+            </p>
+            <p>
+              However, when used strategically, they can draw attention to
+              certain elements on the page that you want users to focus on.
+            </p>
+            <img src="complementary.svg" />
+          </section>
+
+          <section>
+            <h3>Monochromatic</h3>
+
+            <p>
+              A single color with varying shades and tints to create a
+              monochromatic palette.
+            </p>
+            <p>
+              The use of a single color can provide an immediate sense of
+              harmony.
+            </p>
+            <img src="monochromatic.svg" />
+          </section>
+        </section>
+
+        <section>
+          <h3>Cool colors and Warm colors</h3>
+          <p>Colors can be clasified in cool colors or warm colors</p>
+
+          <section>
+            <h3>Cool colors</h3>
+            <p>
+              Cool colors are given this designation because of their calming,
+              soothing nature. They’re often associated with winter climates or
+              water.
+            </p>
+            <p>
+              These colors range between blue, purple and green. Most gray
+              colors fall into the cool category as well.
+            </p>
+          </section>
+
+          <section>
+            <h3>Warm colors</h3>
+            <p>
+              Warm colors range between red and yellow, which include various
+              versions of those colors in addition to orange. This also
+              comprises colors such as brown and tan. These are considered to be
+              “warm” colors in that they evoke a sense of warmth. For instance,
+              fire is associated with warmth, and it typically burns between the
+              spectrum of reds and yellows. Warm colors can also promote a
+              feeling of aggression and are considered bold.
+            </p>
+          </section>
+
+          <section>
+            <h2>Optimal form of setting color in websites</h2>
+            <p>There are different ways of setting colors in CSS, those are:</p>
+            <ul>
+              <li>Keyword: example, yellow</li>
+              <li>Hex Code: example, #fff</li>
+              <li>RGB: example, rgb(23, 45, 23)</li>
+              <li>HSLA: example, hsla(34, 100%, 50%, 0.1)</li>
+            </ul>
+
+            <p>But the HSLA is the best and the most semantic, this is why:</p>
+            <ul>
+              <li>The CSS color keywords only give us a few options.</li>
+              <li>
+                Hex Codes and RGB values cannot be intuitively adjusted. For
+                example, you get feedback on your design that one color needs to
+                be a little brighter, that does not translate to intuitive
+                changes within Hexadecimal codes or RGB values.
+              </li>
+              <li>
+                HSLA is the most semantic system of setting colors with CSS.
+              </li>
+              <li>Let you control the contrast and the color scheme better</li>
+            </ul>
+
+            <p>Use of the HSLA:</p>
+            <ul>
+              <li>
+                The “pure” color is set with the Hue. This is expressed as the
+                angle in degrees around the color wheel.
+              </li>
+              <li>
+                Saturation refers to the intensity or purity of that hue. Colors
+                with full saturation (100%) are the color itself, colors with no
+                saturation (0%) are completely grayscale.
+              </li>
+              <li>
+                Lightness refers to the lightness of the color. 0% is black,
+                100% is white.
+              </li>
+              <li>
+                A, or alpha, refers to the opacity. 0% is fully transparent,
+                100% is fully opaque.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Best practices about colors</h2>
+
+            <ul>
+              <li>
+                <strong>Use neon colors sparingly.</strong> While the use of
+                neon colors can feel hip, they are often hard on a user's eyes.
+              </li>
+              <li>
+                <strong>Avoid vibrating colors.</strong> Vibrating colors result
+                from pairing two colors with high saturation together that may
+                be complementary to one another. It creates a glowing or moving
+                effect, which also can be hard on one's eyes.
+              </li>
+              <li>
+                <strong>Use backdrops to separate vibrating colors.</strong> In
+                the example, the white backdrop behind the green card reduces
+                the space where the contrasting colors (red and green) are
+                directly next to each other, but the overall effect is still too
+                intense for most websites.
+              </li>
+              <li>
+                <strong
+                  >Avoid color combinations with insufficient contrast,</strong
+                >
+                including:
+                <ul>
+                  <li>Bright colors on top of bright colors</li>
+                  <li>Light colors on top of light colors</li>
+                  <li>Dark colors on top of dark colors</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </article>
+    </main>
+
+    <aside>
+      <p>Fuente: <a href="https://codecademy.com">Codecademy</a></p>
+    </aside>
+  </body>
+</html>

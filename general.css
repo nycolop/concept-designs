@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  margin: 0px;
+}
+
+article {
+  border: 2px solid black;
+  padding: 20px;
+}
